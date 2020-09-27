@@ -27,7 +27,7 @@ jobs:
           vs-version: '[12.0]'
     
       - name: Setup NuGet
-        uses: NuGet/setup-nuget@1.0.2
+        uses: NuGet/setup-nuget@v1.0.2
         
       - name: Restore NuGet packages
         run: nuget restore AutoBuild2013.sln
