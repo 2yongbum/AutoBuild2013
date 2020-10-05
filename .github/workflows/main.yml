@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     # The type of runner that the job will run on
-    runs-on: [windows-latest]
+    runs-on: [windows-2016]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -23,8 +23,6 @@ jobs:
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.1
-        with:
-          vs-version: '[16.4,16.5)'
     
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.2
