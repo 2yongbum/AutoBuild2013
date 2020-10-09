@@ -21,18 +21,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         
-      #- name: Setup MSBuild
-        #uses: microsoft/setup-msbuild@v1.0.1
-      - name: Setup 2013 Build tools
-        run: npm install --msvs-version=2013
-        
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.1
+
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.2
         
       - name: Restore NuGet packages
         run: nuget restore AutoBuild2013.sln
 
-
+      - name: Setup 2013 Build tools
+        run: choco install microsoft-build-tools-2013
         
       - name: Build the Solution
         run: msbuild AutoBuild2013.sln
