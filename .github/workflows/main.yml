@@ -34,4 +34,5 @@ jobs:
         run: choco install microsoft-build-tools-2013
         
       - name: Build the Solution
-        run: msbuild AutoBuild2013.sln
+#         run: msbuild AutoBuild2013.sln
+        run: "C:\Program Files (x86)\MSBuild\12.0\bin\MSbuild.exe" AutoBuild2013.sln
