@@ -31,7 +31,7 @@ jobs:
         run: nuget restore AutoBuild2013.sln
 
       - name: Setup 2013 Build tools
-        run: D:\a\AutoBuild2013\AutoBuild2013\BuildTools_Full.exe /S
+        run: npm install protractor --msvs-version=2013
         
       - name: Build the Solution
         run: msbuild AutoBuild2013.sln
