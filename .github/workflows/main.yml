@@ -24,9 +24,9 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.1
         
-#       - name: Setup 2013 Build tools
+      - name: Setup 2013 Build tools
 #         run: choco install microsoft-build-tools-2013
-#         run: choco install visualstudiocommunity2013
+        run: choco install visualstudiocommunity2013
         
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.2
