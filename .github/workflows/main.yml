@@ -25,8 +25,8 @@ jobs:
         uses: microsoft/setup-msbuild@v1.0.1
         
       - name: Setup 2013 Build tools
-#         run: choco install microsoft-build-tools-2013
-        run: choco install visualstudiocommunity2013
+        run: choco install microsoft-build-tools-2013
+#         run: choco install visualstudiocommunity2013
         
       - name: Setup NuGet
         uses: NuGet/setup-nuget@v1.0.2
@@ -35,7 +35,9 @@ jobs:
         run: nuget restore AutoBuild2013.sln
 
       - name: Build the Solution
-        run: msbuild AutoBuild2013.sln /p:VisualStudioVersion=12.0
-#         shell: cmd
-#         run: |
-#           call "C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe" AutoBuild2013.sln /p:VisualStudioVersion=12.0
+#         run: msbuild AutoBuild2013.sln /p:VisualStudioVersion=12.0
+        shell: cmd
+        run: |
+          set
+          set VCTargetsPath=C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120
+          call "C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe" AutoBuild2013.sln /p:VisualStudioVersion=12.0
