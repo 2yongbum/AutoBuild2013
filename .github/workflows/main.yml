@@ -38,8 +38,8 @@ jobs:
 #         run: msbuild AutoBuild2013.sln /p:VisualStudioVersion=12.0
         shell: cmd
         run: |
-          set
           set VCTargetsPath=C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140
+          ls "C:\Program Files (x86)"
           ls "C:\Program Files (x86)\MSBuild\Microsoft.Cpp"
           ls "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0"
           ls "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140"
